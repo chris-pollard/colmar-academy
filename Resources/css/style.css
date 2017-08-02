@@ -1,3 +1,9 @@
+$color1: rgba(161, 232, 175, 1);
+$color2: rgba(148, 197, 149, 1);
+$color3: rgba(116, 124, 146, 1);
+$color4: rgba(55, 39, 114, 1);
+$color5: rgba(58, 36, 73, 1);
+
 body {
   text-align: center;
   width: 100%;
@@ -7,6 +13,17 @@ body {
 
 h1 {
   font-size: 2.5rem;
+  font-family: "raleway";
+  font-weight: 800;
+  color: #D4F4DA;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "raleway";
+  color: #D4F4DA;
+  font-weight: 800;
 }
 
 h2 {
@@ -21,11 +38,48 @@ h4 {
   font-size: 1.25rem;
 }
 
+p,
+span,
+a {
+  font-family: "Open Sans";
+  font-size: 0.9rem;
+  color: #D4F4DA;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #D4F4DA;
+}
+
+/* LIGHT SECTION */
+
+.odd {
+  background-color: rgba(116, 124, 146, 1);
+
+}
+
+h2.odd,
+h3.odd,
+h4.odd,
+p.odd {
+  color: #D4F4DA;
+}
+
+/* DARK SECTION */
+.even {
+    background-color: rgba(55, 39, 114, 0.8);
+}
+
 .outer-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .container {
@@ -49,8 +103,13 @@ h4 {
 #header {
   max-width: 100%;
   justify-content: space-between;
-  border: 1px solid orange;
+  border: thin transparent solid;
   height: 4rem;
+}
+
+#outer-header {
+  border-bottom: none;
+  background: linear-gradient(rgba(46, 32, 94, 1), rgba(55, 39, 114, 0.8));
 }
 
 .logo-title img {
@@ -64,6 +123,11 @@ h4 {
 
 .logo-title {
   padding-left: 2rem;
+}
+
+.logo-title .colmar {
+  font-weight: 800;
+  color: #D4F4DA;
 }
 
 .menu {
@@ -88,6 +152,10 @@ nav span {
     padding-left: 1rem;
     justify-content: space-around;
   }
+
+  #outer-header {
+    border: none;
+  }
 }
 
 
@@ -96,7 +164,7 @@ nav span {
 
 .left-box {
   width: 60%;
-  border: 1px solid grey;
+  border: thin transparent solid;
   margin: 0;
 }
 
@@ -105,9 +173,17 @@ nav span {
   height: auto;
 }
 
+#outer-banner {
+  background: linear-gradient(rgba(55, 39, 114, 0.8), rgba(116, 124, 146, 1));
+}
+
+.image-container {
+  padding: 32px 16px 32px 24px;
+}
+
 .banner img {
-  width: 90%;
-  padding: 32px 24px 32px 24px;
+  width: 100%;
+  /*padding: 32px 16px 32px 24px;*/
 }
 
 .banner .right-box {
@@ -126,17 +202,24 @@ nav span {
 .banner-text h1 {
   padding-bottom: 32px;
 }
+
 .banner-text h3 {
   padding-bottom: 24px;
+  font-weight: 400;
 }
 
 .banner {
-  border: 1px solid grey;
+  border: thin transparent solid;
 }
 
 button {
   height: 3rem;
   width: 100%;
+  background-color: #404144;
+  color: #D4D4D5;
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 580px) {
@@ -181,6 +264,10 @@ button {
   height: auto;
 }
 
+#outer-practice {
+  background: linear-gradient(rgba(116, 124, 146, 1), rgba(55, 39, 114, 0.8));
+}
+
 .information-main img {
   width: 100%;
 }
@@ -193,7 +280,23 @@ button {
 
 .information-main h2 {
   padding: 32px 0 24px 0;
+
 }
+
+/*.information-main h2,
+.information-main p,
+.information-main span {
+  color: #202228;
+}
+
+.feature-details h3,
+.feature-details p {
+  color: #202228;
+}
+
+.feature-details a {
+  color: #202228;
+}*/
 
 .attribute {
   display: block;
@@ -206,7 +309,7 @@ button {
   flex-direction: column;
   text-align: left;
   margin: 0;
-  border: 1px solid orange;
+  border: thin transparent solid;
   width: 40%;
 }
 
@@ -218,6 +321,7 @@ button {
   display: flex;
   align-items: center;
   padding: 16px;
+  background-color: rgba(22, 23, 27, 0.2);
 }
 
 .feature-details {
@@ -264,7 +368,11 @@ button {
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  border: 1px solid blue;
+  border: thin transparent solid;
+}
+
+#outer-courses {
+  background: linear-gradient(rgba(55, 39, 114, 0.8), rgba(116, 124, 146, 1));
 }
 
 .course-heading {
@@ -275,7 +383,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 1px solid blue;
+  border: thin transparent solid;
   margin-bottom: 32px;
 }
 
@@ -294,7 +402,18 @@ button {
   display: flex;
   flex-direction: column;
   padding: 16px 16px 24px 16px;
+  background-color: rgba(22, 23, 27, 0.5);
 }
+
+.course-detail h3,
+.course-detail span {
+  color: #D4D4D5;
+}
+
+/*.course-detail h3,
+.course-detail span {
+  color: #202228;
+}*/
 
 .course-detail span {
   padding: 8px 0 0 0;
@@ -324,8 +443,10 @@ button {
     text-align: center;
     padding: 16px 16px 16px 16px;
     margin: 0 0 10px 0;
-    border: 1px solid yellow;
+    border: thin transparent solid;
   }
+
+
 
   #courses {
     width: 100%;
@@ -338,12 +459,16 @@ button {
 #thesis-title,
 #thesis-main {
   max-width: 100%;
-  border: 1px solid blue;
+  border: thin transparent solid;
 }
 
 #thesis-title {
   justify-content: center;
   padding: 32px 0;
+}
+
+#thesis-title h2 {
+  color: #E9E9EA;
 }
 
 video {
@@ -352,12 +477,22 @@ video {
 
 .thesis-video {
   text-align: left;
-  padding: 16px 16px 32px 24px;
+  padding: 0 16px 32px 24px;
 }
 
 .thesis-video h4 {
   padding-top: 24px;
   padding-bottom: 16px;
+}
+
+.thesis-video h4,
+.thesis-video p {
+  color: #D4D4D5;
+}
+
+#thesis-main .highlight-box h3,
+#thesis-main .highlight-box p {
+  color: #D4D4D5;
 }
 
 @media only screen and (max-width: 580px) {
@@ -381,8 +516,13 @@ video {
 #footer {
   max-width: 100%;
   justify-content: space-between;
-  border: 1px solid orange;
+  border: thin transparent solid;
   height: 5rem;
+}
+
+.outer-foot {
+  border-top: 1px solid #B3B7C3;
+  background-color: rgba(116, 124, 146, 0.8);
 }
 
 .copyright {
@@ -402,6 +542,11 @@ video {
   padding-left: 1rem;
 }
 
+.copyright span,
+.terms a {
+  color: #D4D4D5;
+}
+
 @media only screen and (max-width: 580px) {
 
   .copyright {
@@ -409,6 +554,10 @@ video {
     text-align: left;
     display: flex;
     align-items: flex-end;
+  }
+
+  .outer-foot {
+    border: none;
   }
 
 }
