@@ -112,7 +112,7 @@ p.odd {
   background: linear-gradient(rgba(46, 32, 94, 1), rgba(55, 39, 114, 0.8));
 }
 
-.logo-title img {
+.logo-title object {
   min-width: 2.5rem;
 }
 
