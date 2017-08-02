@@ -113,7 +113,7 @@ p.odd {
 }
 
 .logo-title img {
-  width: 2.5rem;
+  min-width: 2.5rem;
 }
 
 .logo-title,
